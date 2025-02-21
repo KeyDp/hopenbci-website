@@ -3,7 +3,6 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>HOPENBCI官网</title>
   <style>
     /* 整体页面样式 */
     body {
@@ -15,25 +14,10 @@
       min-height: 100vh;
     }
 
-    /* 页眉样式 */
-    header {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      position: relative;
-      z-index: 2;
-    }
-
     /* 导航菜单样式 */
     nav {
-      background-color: rgba(68, 68, 68, 0.8); /* 半透明背景 */
+      background-color: #007BFF; /* 将导航菜单背景颜色改为接近蓝色 */
       overflow: hidden;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 3;
     }
 
     nav a {
@@ -41,23 +25,23 @@
       display: block;
       color: white;
       text-align: center;
-      padding: 10px 12px;
+      padding: 60px 12px; /* 增加上下内边距，从 10px 改为 60px */
       text-decoration: none;
+	  font-size: 23px; /* 增大字体大小 */
     }
 
     nav a:hover {
-      background-color: #555;
+      background-color: #0056b3; /* 鼠标悬停时的颜色，可根据需要调整 */
     }
 
     /* 首图框样式 */
-    .hero-image {
-      background-image: url('1.jpg');
+   .hero-image {
+      /* 请将这里的图片路径替换为你自己选择的图片路径 */
+      background-image: url('HOPEN首页图1.jpg');
       background-size: cover;
       background-position: center;
-      height: 800px;
+      height: 800px; /* 可根据需要调整首图框的高度 */
       width: 100%;
-      position: relative;
-      z-index: 1;
     }
 
     /* 页脚样式 */
@@ -80,8 +64,6 @@
 </head>
 
 <body>
-  <header>
-    <h1>HOPENBCI 官网</h1>
   </header>
   <nav>
     <a href="index.html">首页</a>
@@ -94,7 +76,7 @@
     <div class="hero-image"></div>
   </main>
   <footer>
-    &copy; 2025 HOPENBCI版权所有
+    &copy;HOPEN版权所有
   </footer>
 </body>
 

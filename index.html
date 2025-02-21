@@ -21,12 +21,19 @@
       color: white;
       text-align: center;
       padding: 20px;
+      position: relative;
+      z-index: 2;
     }
 
     /* 导航菜单样式 */
     nav {
-      background-color: #444;
+      background-color: rgba(68, 68, 68, 0.8); /* 半透明背景 */
       overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 3;
     }
 
     nav a {
@@ -43,23 +50,14 @@
     }
 
     /* 首图框样式 */
-   .hero-image {
-      /* 请将这里的图片路径替换为你自己选择的图片路径 */
-      background-image: url('1.jpg'); 
+    .hero-image {
+      background-image: url('1.jpg');
       background-size: cover;
       background-position: center;
-      height: 800px; /* 可根据需要调整首图框的高度 */
+      height: 800px;
       width: 100%;
-    }
-
-    /* 标题框样式 */
-   .title-box {
-      background-color: #f0f0f0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      padding: 50px;
-      text-align: center;
-      margin: 50px;
+      position: relative;
+      z-index: 1;
     }
 
     /* 页脚样式 */
@@ -94,9 +92,6 @@
   <main>
     <!-- 首图框 -->
     <div class="hero-image"></div>
-    <div class="title-box">
-      <h1>HOPENBCI</h1>
-    </div>
   </main>
   <footer>
     &copy; 2025 HOPENBCI版权所有

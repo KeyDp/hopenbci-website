@@ -6,76 +6,289 @@
   <style>
     /* 整体页面样式 */
     body {
+      /* 设置页面使用的字体族，若 Arial 不可用，则依次尝试 sans-serif 中的其他字体 */
       font-family: Arial, sans-serif;
+      /* 去除页面的外边距 */
       margin: 0;
+      /* 去除页面的内边距 */
       padding: 0;
+      /* 将 body 元素设置为弹性布局容器，子元素按列排列 */
       display: flex;
+      /* 子元素沿垂直方向排列 */
       flex-direction: column;
+      /* 设置 body 元素的最小高度为视口高度，确保页脚能固定在底部 */
       min-height: 100vh;
     }
 
     /* 导航菜单样式 */
     nav {
-      background-color: #007BFF; /* 将导航菜单背景颜色改为接近蓝色 */
+      /* 设置导航栏的背景颜色为蓝色 */
+      background-color: #007BFF;
+      /* 处理浮动元素溢出的情况 */
       overflow: hidden;
     }
 
     nav a {
+      /* 让导航链接向左浮动，实现水平排列 */
       float: left;
+      /* 将导航链接设置为块级元素，使其可以设置宽度和高度 */
       display: block;
+      /* 设置导航链接的文字颜色为白色 */
       color: white;
+      /* 让导航链接的文字居中显示 */
       text-align: center;
-      padding: 60px 12px; /* 增加上下内边距，从 10px 改为 60px */
+      /* 设置导航链接的内边距，上下为 40px，左右为 10px */
+      padding: 40px 10px;
+      /* 去除导航链接的下划线 */
       text-decoration: none;
-	  font-size: 23px; /* 增大字体大小 */
+      /* 设置导航链接的字体大小为 23px */
+      font-size: 23px;
     }
 
     nav a:hover {
-      background-color: #0056b3; /* 鼠标悬停时的颜色，可根据需要调整 */
+      /* 当鼠标悬停在导航链接上时，将背景颜色变为深蓝色 */
+      background-color: #0056b3;
     }
 
     /* 首图框样式 */
    .hero-image {
-      /* 请将这里的图片路径替换为你自己选择的图片路径 */
-      background-image: url('HOPEN首页图1.jpg');
-      background-size: cover;
+      /* 设置首图框的背景图片，需替换为实际图片路径 */
+      background-image: url('HOPEN首页图1（备份不同大小）.jpg');
+      /* 让背景图片覆盖整个首图框 */
+      background-size: 100%;
+      /* 让背景图片在首图框中居中显示 */
       background-position: center;
-      height: 800px; /* 可根据需要调整首图框的高度 */
+	  background-repeat: no-repeat;
+      /* 设置首图框的高度为 800px */
+      height: 800px;
+      /* 设置首图框的宽度为 100%，即占满整个页面宽度 */
       width: 100%;
+    }
+
+    /* 图文展示区样式 */
+   .image-text-section {
+      /* 将图文展示区设置为弹性布局容器 */
+      display: flex;
+      /* 让图文展示区的子元素（文字和图片部分）在水平方向上均匀分布 */
+      justify-content: space-between;
+      /* 设置图文展示区的内边距为 50px */
+      padding: 50px;
+    }
+
+   .text-content {
+      /* 让文字部分在弹性布局中占据一份空间 */
+      flex: 1;
+      /* 设置文字部分右侧的内边距为 65px */
+      padding-right: 65px;
+    }
+
+   .text-content h2 {
+      /* 设置文字部分标题的字体大小为 28px */
+      font-size: 28px;
+    }
+
+   .text-content p {
+      /* 设置文字部分段落的字体大小为 16px */
+      font-size: 16px; 
+    }
+
+   .text-content hr {
+      /* 设置文字部分分割线的边框样式为 1px 宽的黑色实线 */
+      border: 1px solid black; 
+      /* 设置分割线的上下外边距为 20px */
+      margin: 20px 0; 
+    }
+
+   .image-content {
+      /* 让图片部分在弹性布局中占据一份空间 */
+      flex: 1;
+    }
+
+   .image-content img {
+      /* 设置图片的宽度为 100%，即占满图片部分的宽度 */
+      width: 100%;
+      /* 让图片的高度自适应宽度，保持图片比例 */
+      height: auto;
+    }
+
+    /* 非侵入式脑机产品系列样式 */
+   .product-section {
+      /* 设置产品系列区域的内边距为 50px */
+      padding: 50px;
+    }
+
+   .product-section h2 {
+      /* 设置产品系列区域标题的字体大小为 28px */
+      font-size: 28px;
+    }
+
+   .product-section p {
+      /* 设置产品系列区域段落的字体大小为 16px */
+      font-size: 16px;
+    }
+
+    /* 产品图片区样式 */
+   .product-images {
+      /* 设置产品图片区的顶部外边距为 20px */
+      margin-top: 20px;
+      /* 将产品图片区设置为弹性布局容器 */
+      display: flex;
+    }
+
+   .product-image-box {
+      /* 设置单个产品图片框的宽度为 30%，可根据需要调整 */
+      width: 30%; 
+      /* 去除产品图片框的外边距 */
+      margin: 0;
+      /* 将产品图片框设置为相对定位，为内部的可点击图标定位做准备 */
+      position: relative; 
+    }
+
+   .product-image-box h3 {
+      /* 让产品图片框标题的文字居中显示 */
+      text-align: center;
+      /* 设置产品图片框标题的字体大小为 28px */
+      font-size: 28px;
+      /* 设置文字颜色为黑色 */
+      color: black;
+      /* 去掉下划线 */
+      text-decoration: none; 
+    }
+
+   .product-image-box img {
+      /* 设置产品图片框内图片的宽度为 100%，即占满图片框宽度 */
+      width: 100%;
+      /* 让产品图片框内图片的高度自适应宽度，保持图片比例 */
+      height: auto;
+    }
+
+    /* 可点击图标样式 */
+   .click-icon {
+      /* 将可点击图标设置为绝对定位，相对于产品图片框定位 */
+      position: absolute;
+      /* 设置可点击图标距离产品图片框底部 10px */
+      bottom: 10px;
+      /* 设置可点击图标距离产品图片框右侧 10px */
+      right: 10px;
+      /* 设置可点击图标的宽度为 20px */
+      width: 20px;
+      /* 设置可点击图标的高度为 20px */
+      height: 20px;
+      /* 设置可点击图标的背景颜色为蓝色 */
+      background-color: #007BFF;
+      /* 将可点击图标设置为圆形 */
+      border-radius: 50%;
+      /* 设置可点击图标内文字的颜色为白色 */
+      color: white;
+      /* 让可点击图标内文字居中显示 */
+      text-align: center;
+      /* 设置可点击图标内文字的行高为 20px，使其垂直居中 */
+      line-height: 20px;
+      /* 设置可点击图标内文字的字体大小为 14px */
+      font-size: 14px;
+      /* 将鼠标悬停在可点击图标上时的指针样式设置为手型 */
+      cursor: pointer;
     }
 
     /* 页脚样式 */
     footer {
+      /* 设置页脚的背景颜色为深灰色 */
       background-color: #333;
+      /* 设置页脚文字的颜色为白色 */
       color: white;
+      /* 让页脚文字居中显示 */
       text-align: center;
+      /* 设置页脚的内边距为 20px */
       padding: 20px;
+      /* 让页脚在弹性布局中自动填充剩余空间，固定在页面底部 */
       margin-top: auto;
     }
 
     /* 响应式设计：小屏幕下导航栏样式 */
     @media (max-width: 600px) {
       nav a {
+        /* 在小屏幕下，让导航链接不浮动，改为垂直排列 */
         float: none;
+        /* 在小屏幕下，让导航链接的宽度占满整个页面宽度 */
         width: 100%;
+      }
+      .image-text-section {
+        /* 在小屏幕下，让图文展示区的子元素垂直排列 */
+        flex-direction: column;
+      }
+      .text-content {
+        /* 在小屏幕下，去除文字部分右侧的内边距 */
+        padding-right: 0;
+        /* 在小屏幕下，设置文字部分底部的外边距为 20px */
+        margin-bottom: 20px;
+      }
+      .product-image-box {
+        /* 在小屏幕下，将单个产品图片框的宽度调整为 80% */
+        width: 80%; 
       }
     }
   </style>
 </head>
 
 <body>
-  </header>
+  <!-- 导航菜单 -->
   <nav>
+    <!-- 首页链接，点击后跳转到 index.html 页面 -->
     <a href="index.html">首页</a>
+    <!-- 非侵入式 BCI 产品链接，点击后跳转到 non-invasive-bci-products.html 页面 -->
     <a href="non-invasive-bci-products.html">非侵入式BCI产品</a>
+    <!-- BCI 示例应用链接，点击后跳转到 bci-example-applications.html 页面 -->
     <a href="bci-example-applications.html">BCI示例应用</a>
-    <a href="about-us.html">关于我们</a>
+    <!-- 关于我们链接，点击后跳转到 about-us.html 页面 -->
+    <a href="contact-us.html">联系我们</a>
   </nav>
   <main>
     <!-- 首图框 -->
     <div class="hero-image"></div>
+    <!-- 图文展示区 -->
+    <div class="image-text-section">
+      <!-- 文字部分 -->
+      <div class="text-content">
+        <!-- 公司介绍标题 -->
+        <h2>HOPEN BCI</h2>
+        <!-- 分割线 -->
+        <hr> 
+        <!-- 公司介绍段落 -->
+        <p>HOPEN BCI是以计算技术、通信技术等信息技术为基础，主要从事脑机接口及嵌入式操作系统方向的研究、开发和生产经营的高新技术企业，主推自主研发信息产品的"女娲计划"。此计划已获部委以及国内外各大电子、电器、 OEM、软件等厂商的支持，并由此展开合作。公司拥有高新技术企业证书、CMM3级资质，自1998年成立以来积累了百余项知识产权。我们是一家在基础软件领域深耕多年的企业，凭借长期积累的技术实力与行业经验，致力于开拓脑机接口领域。我们正全力打造脑机接口领域的公共服务平台，通过融合脑电、肌电、心电、音频、视频等多模态数据，为该领域的发展提供坚实支撑。同时，积极推动脑机开放硬件平台的设计与开发，不断提升应用能力。</p>
+        <p>HOPEN BCI近年来承担了XXX科技重大专项、XX重点研发计划、XX科技支撑计划，以及北京市、中关村科技园区等科技项目。不仅如此，我们与业内上下游企业广泛合作，与众多芯片厂商、OEM 厂商及软件开发商建立了良好关系，形成产业优势互补、协调发展的良好态势。未来，我们将继续在脑机接口领域深入探索，携手更多伙伴，共同推动行业进步 。</p>
+      </div>
+      <!-- 图片部分 -->
+      <div class="image-content">
+        <!-- 公司图片，需替换为实际图片路径 -->
+        <img src="HOPEN首页图2.jpg" alt="Company Image">
+      </div>
+    </div>
+    <!-- 非侵入式脑机产品系列 -->
+    <div class="product-section">
+      <!-- 产品系列标题 -->
+      <h2>非侵入式脑机产品系列</h2>
+      <!-- 产品说明段落 -->
+      <p>HOPEN非侵入式脑机产品有MindMAX。</p>
+      <!-- 产品图片区 -->
+      <div class="product-images">
+        <!-- 点击图片框可跳转到 non-invasive-bci-products.html 页面 -->
+        <a href="non-invasive-bci-products.html"> 
+          <!-- 单个产品图片框 -->
+          <div class="product-image-box">
+            <!-- 产品标题 -->
+            <h3>MindMAX</h3>
+            <!-- 产品图片，需替换为实际图片路径 -->
+            <img src="HOPEN首页MindMAX.jpg" alt="MindMAX">
+            <!-- 可点击图标 -->
+            <div class="click-icon">➡</div> 
+          </div>
+        </a>
+      </div>
+    </div>
   </main>
+  <!-- 页脚 -->
   <footer>
+    <!-- 版权信息 -->
     &copy;HOPEN版权所有
   </footer>
 </body>

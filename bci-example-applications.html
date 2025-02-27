@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>BCI示例应用</title>
+  <style>
+    /* 整体页面样式 */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    /* 导航菜单样式 */
+    nav {
+      background-color: #007BFF;
+      overflow: hidden;
+    }
+
+    nav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 40px 10px;
+      text-decoration: none;
+      font-size: 23px;
+    }
+
+    nav a:hover {
+      background-color: #0056b3;
+    }
+
+    /* 页面标题样式 */
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+      color: #007BFF;
+      font-size: 36px;
+    }
+
+    /* 应用列表容器样式 */
+    .application-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 50px;
+    }
+
+    /* 单个应用项样式 */
+    .application-item {
+      width: 300px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .application-item:hover {
+      transform: translateY(-5px);
+    }
+
+    /* 应用视频样式 */
+    .application-item video {
+      width: 100%;
+      height: auto;
+    }
+
+    /* 应用内容样式 */
+    .application-content {
+      padding: 20px;
+    }
+
+    .application-item h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #007BFF;
+    }
+
+    .application-item p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* 页脚样式 */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 导航栏 -->
+  <nav>
+    <a href="index.html">首页</a>
+    <a href="non-invasive-bci-products.html">非侵入式BCI产品</a>
+    <a href="bci-example-applications.html">BCI示例应用</a>
+    <a href="contact-us.html">联系我们</a>
+  </nav>
+  <!-- 页面标题 -->
+  <h1>BCI示例应用</h1>
+  <!-- 应用列表 -->
+  <div class="application-list">
+    <!-- 脑控无人机 -->
+    <div class="application-item">
+      <video controls>
+        <source src="横屏-脑控无人机.mp4" type="video/mp4">
+        您的浏览器不支持播放该视频。
+      </video>
+      <div class="application-content">
+        <h2>脑控无人机</h2>
+        <p>利用HOPEN BCI技术控制无人机的飞行</p>
+      </div>
+    </div>
+    <!-- 脑控机械臂 -->
+    <div class="application-item">
+      <video controls>
+        <source src="横屏-脑控机械臂.mp4" type="video/mp4">
+        您的浏览器不支持播放该视频。
+      </video>
+      <div class="application-content">
+        <h2>脑控机械臂</h2>
+        <p>利用HOPEN BCI技术使机械臂根据大脑信号完成搬运物体的任务</p>
+      </div>
+    </div>
+    <!-- 脑控机械车 -->
+    <div class="application-item">
+      <video controls>
+        <source src="横屏-脑控机械车.mp4" type="video/mp4">
+        您的浏览器不支持播放该视频。
+      </video>
+      <div class="application-content">
+        <h2>脑控机械车</h2>
+        <p>利用HOPEN BCI技术控制机械车行进、转向</p>
+      </div>
+    </div>
+    <!-- 脑控娃娃机 -->
+    <div class="application-item">
+      <video controls>
+        <source src="横屏-脑控娃娃机.mp4" type="video/mp4">
+        您的浏览器不支持播放该视频。
+      </video>
+      <div class="application-content">
+        <h2>脑控娃娃机</h2>
+        <p>利用HOPEN BCI技术控制娃娃机抓取玩偶</p>
+      </div>
+    </div>
+    <!-- MEDUSA HOPEN Platform 视频 1 -->
+    <div class="application-item">
+      <video controls>
+        <source src="横屏-MEDUSA HOPEN 运动想象APP.mp4" type="video/mp4">
+        您的浏览器不支持播放该视频。
+      </video>
+      <div class="application-content">
+        <h2>MEDUSA HOPEN Platform APP</h2>
+        <p>MEDUSA HOPEN Platform中的运动想象APP</p>
+      </div>
+    </div>
+    <!-- MEDUSA HOPEN Platform 视频 2 -->
+    <div class="application-item">
+      <video controls>
+        <source src="横屏-MEDUSA HOPEN Platform稳态视觉诱发电位APP.mp4" type="video/mp4">
+        您的浏览器不支持播放该视频。
+      </video>
+      <div class="application-content">
+        <h2>MEDUSA HOPEN Platform APP</h2>
+        <p>MEDUSA HOPEN Platform中的稳态视觉诱发电位APP</p>
+      </div>
+    </div>
+  </div>
+  <!-- 页脚 -->
+  <footer>
+    &copy;HOPEN版权所有
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>联系我们 - HOPEN</title>
+  <style>
+    /* 整体页面样式 */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* 导航菜单样式，从首页复制过来 */
+    nav {
+      background-color: #007BFF;
+      overflow: hidden;
+    }
+
+    nav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 40px 10px;
+      text-decoration: none;
+      font-size: 23px;
+    }
+
+    nav a:hover {
+      background-color: #0056b3;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+      color: #007BFF;
+      font-size: 36px;
+    }
+
+    .form-container {
+      background-color: white;
+      /* 增大最大宽度，这里设置为 800px，可按需调整 */
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="tel"],
+    form select,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    form input[type="submit"] {
+      background-color: #007BFF;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    form input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    .required {
+      color: red;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="index.html">首页</a>
+    <a href="non-invasive-bci-products.html">非侵入式BCI产品</a>
+    <a href="bci-example-applications.html">BCI示例应用</a>
+    <a href="contact-us.html">联系我们</a>
+  </nav>
+  <h1>项目合作 Project Cooperation</h1>
+  <div class="form-container">
+    <form action="#" method="post">
+      <label for="company">公司/机构/组织名称 <span class="required">*</span></label>
+      <input type="text" id="company" name="company" required>
+
+      <label for="contact-name">联系人姓名 <span class="required">*</span></label>
+      <input type="text" id="contact-name" name="contact-name" required>
+
+      <label for="contact-phone">联系人电话 <span class="required">*</span></label>
+      <input type="tel" id="contact-phone" name="contact-phone" required>
+
+      <label for="contact-email">联系人邮箱 <span class="required">*</span></label>
+      <input type="email" id="contact-email" name="contact-email" required>
+
+      <label for="bci-interest">对 HOPEN BCI 产品的兴趣点</label>
+      <select id="bci-interest" name="bci-interest">
+        <option value="non-invasive-bci">非侵入式 BCI 产品</option>
+        <option value="bci-applications">BCI 示例应用</option>
+        <option value="both">两者皆有</option>
+      </select>
+
+      <label for="project-idea">项目合作想法</label>
+      <textarea id="project-idea" name="project-idea" rows="5"
+        placeholder="请简要描述您的项目合作想法，例如您希望在哪些领域应用 BCI 技术等。"></textarea>
+
+      <input type="submit" value="提交">
+    </form>
+  </div>
+  <footer>
+    &copy;HOPEN版权所有
+  </footer>
+</body>
+
+</html>

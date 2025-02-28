@@ -99,6 +99,30 @@
       padding: 20px;
       margin-top: auto;
     }
+	
+    /* 响应式设计：小屏幕下导航栏样式 */
+    @media (max-width: 600px) {
+      nav a {
+        /* 在小屏幕下，让导航链接不浮动，改为垂直排列 */
+        float: none;
+        /* 在小屏幕下，让导航链接的宽度占满整个页面宽度 */
+        width: 100%;
+      }
+      .image-text-section {
+        /* 在小屏幕下，让图文展示区的子元素垂直排列 */
+        flex-direction: column;
+      }
+      .text-content {
+        /* 在小屏幕下，去除文字部分右侧的内边距 */
+        padding-right: 0;
+        /* 在小屏幕下，设置文字部分底部的外边距为 20px */
+        margin-bottom: 20px;
+      }
+      .product-image-box {
+        /* 在小屏幕下，将单个产品图片框的宽度调整为 100% */
+        width: 100%; 
+      }
+    }
   </style>
 </head>
 

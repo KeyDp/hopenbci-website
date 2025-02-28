@@ -17,6 +17,21 @@
       color: #333;
     }
 
+    /* 首图框样式 */
+   .hero-image {
+      /* 设置首图框的背景图片，需替换为实际图片路径 */
+      background-image: url('HOPEN首页图1（备份不同大小）.jpg');
+      /* 让背景图片覆盖整个首图框 */
+      background-size: cover;
+      /* 让背景图片在首图框中居中显示 */
+      background-position: center;
+      background-repeat: no-repeat;
+      /* 设置首图框的高度为 800px */
+      height: 800px;
+      /* 设置首图框的宽度为 100%，即占满整个页面宽度 */
+      width: 100%;
+    }
+
     /* 导航菜单样式 */
     nav {
       background-color: #007BFF;
@@ -46,7 +61,7 @@
     }
 
     /* 应用列表容器样式 */
-    .application-list {
+   .application-list {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -54,7 +69,7 @@
     }
 
     /* 单个应用项样式 */
-    .application-item {
+   .application-item {
       width: 300px;
       background-color: white;
       border-radius: 8px;
@@ -64,28 +79,28 @@
       transition: transform 0.3s ease;
     }
 
-    .application-item:hover {
+   .application-item:hover {
       transform: translateY(-5px);
     }
 
     /* 应用视频样式 */
-    .application-item video {
+   .application-item video {
       width: 100%;
       height: auto;
     }
 
     /* 应用内容样式 */
-    .application-content {
+   .application-content {
       padding: 20px;
     }
 
-    .application-item h2 {
+   .application-item h2 {
       font-size: 24px;
       margin-bottom: 10px;
       color: #007BFF;
     }
 
-    .application-item p {
+   .application-item p {
       font-size: 16px;
       line-height: 1.6;
     }
@@ -98,41 +113,30 @@
       padding: 20px;
       margin-top: auto;
     }
-	
-	/* 响应式设计：小屏幕下导航栏样式 */
-	@media (max-width: 600px) {
-		/* 导航链接横向排列 */
-		nav {
-			display: flex;
-			justify-content: space-around;
-		}
 
-		nav a {
-			float: none;
-			width: auto;
-		}
-
-		/* 图文展示区横向排列 */
-		.image-text-section {
-			display: flex;
-			flex-direction: row;
-			flex-wrap: wrap; /* 如果内容过多，允许换行 */
-		}
-
-		.text-content {
-			padding-right: 20px; /* 恢复文字部分右侧内边距，可按需调整 */
-			margin-bottom: 0;
-			width: auto; /* 自动宽度，根据内容调整 */
-			flex: 1; /* 让文字部分和图片部分按比例分配空间 */
-		}
-
-		/* 产品图片框横向排列 */
-		.product-image-box {
-			width: auto;
-			display: inline-block; /* 让图片框横向排列 */
-			margin-right: 10px; /* 图片框之间的间距，可按需调整 */
-		}
-	}	
+    /* 响应式设计：小屏幕下导航栏样式 */
+    @media (max-width: 600px) {
+      nav a {
+        /* 在小屏幕下，让导航链接不浮动，改为垂直排列 */
+        float: none;
+        /* 在小屏幕下，让导航链接的宽度占满整个页面宽度 */
+        width: 100%;
+      }
+     .image-text-section {
+        /* 在小屏幕下，让图文展示区的子元素垂直排列 */
+        flex-direction: column;
+      }
+     .text-content {
+        /* 在小屏幕下，去除文字部分右侧的内边距 */
+        padding-right: 0;
+        /* 在小屏幕下，设置文字部分底部的外边距为 20px */
+        margin-bottom: 20px;
+      }
+     .product-image-box {
+        /* 在小屏幕下，将单个产品图片框的宽度调整为 100% */
+        width: 100%; 
+      }
+    }
   </style>
 </head>
 
@@ -144,6 +148,8 @@
     <a href="bci-example-applications.html">BCI示例应用</a>
     <a href="contact-us.html">联系我们</a>
   </nav>
+  <!-- 首图区域 -->
+  <div class="hero-image"></div>
   <!-- 页面标题 -->
   <h1>BCI示例应用</h1>
   <!-- 应用列表 -->

@@ -1,132 +1,139 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>非侵入式BCI产品</title>
-  <style>
-    /* 整体页面样式 */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      background-color: #f4f4f4;
-      color: #333;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>非侵入式BCI产品</title>
+    <style>
+        /* 整体页面样式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+            color: #333;
+        }
 
-    /* 导航菜单样式 */
-    nav {
-      background-color: #007BFF;
-      overflow: hidden;
-    }
+        /* 导航菜单样式 */
+        nav {
+            background-color: #007BFF;
+            overflow: hidden;
+        }
 
-    nav a {
-      float: left;
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 40px 10px;
-      text-decoration: none;
-      font-size: 23px;
-    }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 40px 10px;
+            text-decoration: none;
+            font-size: 23px;
+        }
 
-    nav a:hover {
-      background-color: #0056b3;
-    }
+        nav a:hover {
+            background-color: #0056b3;
+        }
 
-    /* 页面标题样式 */
-    h1 {
-      text-align: center;
-      margin-top: 50px;
-      color: #007BFF;
-      font-size: 36px;
-    }
+        /* 页面标题样式 */
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            color: #007BFF;
+            font-size: 36px;
+        }
 
-    /* 产品列表容器样式 */
-    .product-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 50px;
-    }
+        /* 产品展示容器样式 */
+       .product-display {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 50px;
+        }
 
-    /* 单个产品项样式 */
-    .product-item {
-      width: 300px;
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      margin: 20px;
-      overflow: hidden;
-      transition: transform 0.3s ease;
-    }
+        /* 产品视频样式 */
+       .product-video {
+            width: 60%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
 
-    .product-item:hover {
-      transform: translateY(-5px);
-    }
+       .product-video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-    /* 产品图片样式 */
-    .product-item img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
+        /* 产品介绍样式 */
+       .product-description {
+            width: 35%;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
 
-    /* 产品内容样式 */
-    .product-content {
-      padding: 20px;
-    }
+       .product-description h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #007BFF;
+        }
 
-    .product-item h2 {
-      font-size: 24px;
-      margin-bottom: 10px;
-      color: #007BFF;
-    }
+       .product-description p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
 
-    .product-item p {
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
-    /* 页脚样式 */
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: auto;
-    }
-  </style>
+        /* 页脚样式 */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+        }
+    </style>
 </head>
 
 <body>
-  <!-- 导航栏 -->
-  <nav>
-    <a href="index.html">首页</a>
-    <a href="non-invasive-bci-products.html">非侵入式BCI产品</a>
-    <a href="bci-example-applications.html">BCI示例应用</a>
-    <a href="contact-us.html">联系我们</a>
-  </nav>
-  <!-- 页面标题 -->
-  <h1>非侵入式BCI产品</h1>
-  <!-- 产品列表 -->
-  <div class="product-list">
-    <div class="product-item">
-      <img src="HOPEN首页MindMAX.jpg" alt="MindMAX">
-      <div class="product-content">
-        <h2>MindMAX</h2>
-        <p>MindMAX 具有先进的非侵入式脑机接口技术，目前评估自研芯片在功耗、面积、参数性能上可全面超越TI ADS1299，大大提升BCI设备的便携性、测试准确性，能够精准捕捉大脑信号，为用户带来全新的交互体验。</p>
-      </div>
+    <!-- 导航栏 -->
+    <nav>
+        <a href="index.html">首页</a>
+        <a href="non-invasive-bci-products.html">非侵入式BCI产品</a>
+        <a href="bci-example-applications.html">BCI示例应用</a>
+        <a href="contact-us.html">联系我们</a>
+    </nav>
+    <!-- 页面标题 -->
+    <h1>非侵入式BCI产品</h1>
+    <!-- 产品展示 -->
+    <div class="product-display">
+        <div class="product-video">
+            <video id="productVideo" autoplay loop muted playsinline>
+                <source src="横屏-MindMAX产品展示视频.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="product-description">
+            <h2>MindMAX</h2>
+            <p>MindMAX 具有先进的非侵入式脑机接口技术，目前评估自研芯片在功耗、面积、参数性能上可全面超越TI ADS1299，大大提升BCI设备的便携性、测试准确性，能够精准捕捉大脑信号，为用户带来全新的交互体验。</p>
+        </div>
     </div>
-    <!-- 可以添加更多产品项 -->
-  </div>
-  <!-- 页脚 -->
-  <footer>
-    &copy;HOPEN版权所有
-  </footer>
+    <!-- 页脚 -->
+    <footer>
+    &copy;备案号：京ICP备 XXXXXXXXXX号 @XXXXXXXXXXXXXX
+    </footer>
+    <script>
+        const video = document.getElementById('productVideo');
+        video.addEventListener('ended', function () {
+            this.currentTime = 0;
+            this.play();
+        });
+    </script>
 </body>
 
 </html>

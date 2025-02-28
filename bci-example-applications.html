@@ -99,29 +99,40 @@
       margin-top: auto;
     }
 	
-    /* 响应式设计：小屏幕下导航栏样式 */
-    @media (max-width: 600px) {
-      nav a {
-        /* 在小屏幕下，让导航链接不浮动，改为垂直排列 */
-        float: none;
-        /* 在小屏幕下，让导航链接的宽度占满整个页面宽度 */
-        width: 100%;
-      }
-      .image-text-section {
-        /* 在小屏幕下，让图文展示区的子元素垂直排列 */
-        flex-direction: column;
-      }
-      .text-content {
-        /* 在小屏幕下，去除文字部分右侧的内边距 */
-        padding-right: 0;
-        /* 在小屏幕下，设置文字部分底部的外边距为 20px */
-        margin-bottom: 20px;
-      }
-      .product-image-box {
-        /* 在小屏幕下，将单个产品图片框的宽度调整为 100% */
-        width: 100%; 
-      }
-    }
+	/* 响应式设计：小屏幕下导航栏样式 */
+	@media (max-width: 600px) {
+		/* 导航链接横向排列 */
+		nav {
+			display: flex;
+			justify-content: space-around;
+		}
+
+		nav a {
+			float: none;
+			width: auto;
+		}
+
+		/* 图文展示区横向排列 */
+		.image-text-section {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap; /* 如果内容过多，允许换行 */
+		}
+
+		.text-content {
+			padding-right: 20px; /* 恢复文字部分右侧内边距，可按需调整 */
+			margin-bottom: 0;
+			width: auto; /* 自动宽度，根据内容调整 */
+			flex: 1; /* 让文字部分和图片部分按比例分配空间 */
+		}
+
+		/* 产品图片框横向排列 */
+		.product-image-box {
+			width: auto;
+			display: inline-block; /* 让图片框横向排列 */
+			margin-right: 10px; /* 图片框之间的间距，可按需调整 */
+		}
+	}	
   </style>
 </head>
 
